@@ -19,7 +19,7 @@ export function SpellsView(){
 
     return(
 
-        <div>
+        <div className="container">
             {spellItems}
         </div>
 

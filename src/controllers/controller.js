@@ -20,8 +20,12 @@ function fetchAPI(path){
 export function loadCharacters(group=''){
 
    const respons = fetchAPI(`characters/${group}`);
+
+   let checkedCharacters = new Array();
+
+   respons.forEach(character=>{if(character.image != "") checkedCharacters.push(character)});
    
-   return respons;
+   return checkedCharacters;
 }
 
 
