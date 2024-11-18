@@ -59,7 +59,18 @@ button:focus-visible {
   }
 } */
 
+@font-face{
+  font-family: "Harry P";
+  src:local("Harry P"),
+  url('./assets/fonts/HARRYP__.ttf') 
+}
 
 body {
   background-color: darkgray;
+  font-family: 'Harry P';
+}
+
+.search{
+  background-color: darkgray;
+  font-family: 'Harry P';
 }

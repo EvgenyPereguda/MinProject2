@@ -3,19 +3,12 @@
   --navbar-height: 10%;
   --background-main: black;
   --foreground-main: white;
-  --border-slider: white;
-  --background-slider: green;
-  --box-slider: white;
-  --border-feature-box: white;
+  --foreground-title: gold;
   --background-item: white;  
+  --main-font-size: 2.20em;
+  --font-size-scale: 1.618;
+  --search-font-size: 3em;
 }
-/* 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
 
 
 .image-scale {
@@ -25,13 +18,14 @@
 
 .navbar {
   margin-top: -0.5em;
+  margin-left: -0.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--background-main);
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 101%;
   height: var(--navbar-height);
 }
 
@@ -57,13 +51,6 @@
   align-items: center;
 }
 
-/* .navbar > div > div {
-  margin-left: 0.25em;
-  font-size: 2.5em;
-  color: var(--foreground-main);
-} */
-
-
 .navbar-menu li button {
   background-color: var(--background-main);
   text-decoration: none;
@@ -72,7 +59,39 @@
   padding: 1rem;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+/* Card components CSS */
+
+.card {
+  margin: 2.1em;
+  width: 22em;
+  background-image: transparent;
+}
+
+.card-title {
+  word-wrap: break-word;
+  text-align: center;
+  font-size: calc(var(--main-font-size) * var(--font-size-scale));
+  background-color: transparent;
+}
+
+.card-description {
+  word-wrap: break-word;
+  text-align: center;
+  font-size: var(--main-font-size);
+  background-color: transparent;
+}
+
+.card-image {
+  margin: 1em;
+  object-fit: contain;
+  width: 20em;
+  height: 20em;
+}
 
 @media (min-width: 1130px) {
   .navbar-menu {
@@ -85,23 +104,5 @@
     gap: 15px;
   }
 
-  .featureSwitch {
-    display: none;
-  }
 }
 
-
-/* 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */

@@ -20,7 +20,7 @@ export default function NavBar(prop) {
             <button onClick={()=>{prop.onViewChange(2)}}>Spells</button>
           </li>
         </ul>
-      </div>
+      </div>      
     </nav>
   );
 }
