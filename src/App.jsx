@@ -1,12 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './components/NavBar'
 import { CharactersView } from './Views/CharactersView'
 import { SpellsView } from './Views/SpellsView'
 
-import HPLogo from "./assets/HP.png";
 
 function App() {
 
@@ -23,9 +20,6 @@ function App() {
     showView == 2? (<SpellsView input={inputText}/>) :
     (
       <div/>
-      // <div >
-      //       <img className="image-scale" src={HPLogo} alt="Harry Potter logo" />
-      // </div>
     )
     }
     

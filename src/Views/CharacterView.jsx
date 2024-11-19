@@ -2,8 +2,6 @@
 export function CharacterView({name, image, ancestry, house}){
 
 
-    console.log(image)
-
     return(
         <div className="card">
             <div className="card-title">{name}</div>
