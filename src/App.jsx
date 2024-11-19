@@ -22,11 +22,10 @@ function App() {
     showView == 1? (<CharactersView input={inputText}/>) :
     showView == 2? (<SpellsView input={inputText}/>) :
     (
-      <div>
-        <div className='center'>
-              <img className="image-scale" src={HPLogo} alt="Harry Potter logo" />
-        </div>
-      </div>
+      <div/>
+      // <div >
+      //       <img className="image-scale" src={HPLogo} alt="Harry Potter logo" />
+      // </div>
     )
     }
     

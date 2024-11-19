@@ -41,11 +41,9 @@ export default function NavBar(prop) {
   return (
     <nav className="navbar">
       <div className="navbar-top">
-        <div>
-          <img className="image-scale" src={HPLogo} alt="Harry Potter logo" />
-        </div>
+        <img className="image-logo" src={HPLogo} alt="Harry Potter logo" />
 
-        <ul className="navbar-menu">
+        <div className="navbar-menu">
           <li>
             <button className="sectionBtn roundBtn" onClick={handleHome}>Home</button>
           </li>
@@ -55,7 +53,7 @@ export default function NavBar(prop) {
           <li>
             <button className="sectionBtn roundBtn" onClick={handleSpells}>Spells</button>
           </li>
-        </ul>
+        </div>
       </div>    
       {showSearch? (<Search inputSearch={inputSearch} onInputText={handleSearch}/> ):(<div/>)
       }  

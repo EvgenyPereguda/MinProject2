@@ -3,42 +3,37 @@
   max-height: 40%;
 }
 
+.image-logo {
+  max-width: 40%;
+}
+
 .navbar {
-  margin-top: -0.5em;
   position: sticky;
   top: 0;
   width: 100%;
   height: var(--navbar-height);
 }
 
-.navbar-menu {
-  list-style: none;
-  display: none; /* Hidden on mobile */
-  flex-direction: column;
-  width: 15em;
-  position: absolute;
-  bottom: 4em;
-  left: 0.5em;
-}
-
-.navbar-menu.active {
-  display: flex;
-}
-
 .navbar-top {
-  margin: 0.5em;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items:center;
   background-color: var(--background-navbar);
 }
 
+.navbar-menu {
+  list-style: none;
+  display: flex; /* Hidden on mobile */
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .navbar-menu li button {
-  background-color: var(--background-main);
+  background-color: var(--background-main-blocked);
   color: var(--foreground-main);
   text-decoration: none;
-  font-size: 3em;
+  font-size: 10vw;
   display: block;
-  padding: 1rem;
 }
 
 .center{  
@@ -48,6 +43,10 @@
   display: flex;
   justify-content: center;
   background-color: var(--background-main);
+}
+
+.blockedBG{
+  background-color: var(--background-main-blocked);  
 }
 
 .container {
@@ -99,43 +98,12 @@
   width: 1.1em;
 }
 
-.full-screen {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background:
-      center / 400px url(https://placekitten.com/400/400) no-repeat,
-      radial-gradient(#e66465, #9198e5);
-}
-
-.bg {
-  /* The image used */
-  background-image: url('./assets/OIP.jfif');
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.backImage{
-  background-color: var(--background-main);
-  background-image: url('./assets/OIP.jfif'); 
-  background-position: center;
-  height: 100%; 
-  width: 100%;
-}
-
 .fullScreenText{
   font-size: 10em;
 }
 
 .sectionBtn{
-  min-width: 4em;
+  min-width: 1em;
 }
 
 .roundBtn{
@@ -154,5 +122,18 @@
     gap: 15px;
   }
 
+  .navbar-top{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sectionBtn{
+    min-width: 4em;
+  }
+    
+  .navbar-menu li button {
+    font-size: 4vw;
+  }
 }
 
