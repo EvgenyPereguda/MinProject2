@@ -13,7 +13,7 @@ function Search({inputSearch, onInputText}){
     }
 
     return(
-        <div className="center">
+        <div className="center blockedBG">
             <input
             className="search"
             type="text"
