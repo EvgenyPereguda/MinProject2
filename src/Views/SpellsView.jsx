@@ -2,14 +2,23 @@ import { SpellView } from "./SpellView";
 import { loadSpells } from "../controllers/controller";
 
 
-export function SpellsView(){
-
+export function SpellsView(props){
 
     const spells = loadSpells();
 
-    spells.forEach(spell=>{console.log(spell)})
+    const filteredSpells = spells.filter((spell) => {
+
+        if (props.input === '') {
+            return true;
+        }
+        else {
+            return spell.name.toLowerCase().startsWith(props.input)
+        }
+
+    })
+
     
-    const spellItems = spells?.map(spell => (
+    const spellItems = filteredSpells?.map(spell => (
         <SpellView
         key={spell.id} 
         name={spell.name}
@@ -17,12 +26,17 @@ export function SpellsView(){
         )
         );
 
-    return(
+    return(        
+        <dvi className="center">
+            {spellItems.length != 0?(            
+            <div className="container">
+                {spellItems}
+            </div>):
+            (
+                <div className="fullScreenText">None found</div>)
+            }
 
-        <div className="container">
-            {spellItems}
-        </div>
-
+        </dvi>
     )
 
 }

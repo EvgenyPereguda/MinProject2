@@ -1,3 +1,16 @@
+
+:root {
+  --navbar-height: 10%;
+  --background-main: darkgray;
+  --background-navbar: black;
+  --foreground-main: black;
+  --foreground-title: gold;
+  --background-item: white;  
+  --main-font-size: 2.20em;
+  --font-size-scale: 1.618;
+  --search-font-size: 3em;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,12 +78,21 @@ button:focus-visible {
   url('./assets/fonts/HARRYP__.ttf') 
 }
 
+html { 
+  background: url('./assets/OIP.jfif') center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
-  background-color: darkgray;
+  background-color: var(--background-main);
   font-family: 'Harry P';
 }
 
-.search{
-  background-color: darkgray;
+button {
+  color: var(--foreground-main);
+  font-size: 2em;
   font-family: 'Harry P';
 }

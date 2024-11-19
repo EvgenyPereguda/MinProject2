@@ -6,21 +6,31 @@ import NavBar from './components/NavBar'
 import { CharactersView } from './Views/CharactersView'
 import { SpellsView } from './Views/SpellsView'
 
+import HPLogo from "./assets/HP.png";
+
 function App() {
 
-  const [showView, setShowView] = useState(0)
+  const [showView, setShowView] = useState(0);
+  const [inputText, setInputText] = useState("");
+  
 
   return (
-    <>
-    <NavBar onViewChange={setShowView}/>
+    <div >
+    <NavBar onViewChange={setShowView} onInputText={setInputText}/>
     
     {
-    showView == 1? (<CharactersView/>) :
-    showView == 2? (<SpellsView/>) :
-    (<div>Empty</div>)
+    showView == 1? (<CharactersView input={inputText}/>) :
+    showView == 2? (<SpellsView input={inputText}/>) :
+    (
+      <div>
+        <div className='center'>
+              <img className="image-scale" src={HPLogo} alt="Harry Potter logo" />
+        </div>
+      </div>
+    )
     }
     
-    </>
+    </div>
   )
 }
 
